@@ -7,7 +7,7 @@ function Navbar() {
     <div className="navbar">
 
         <h2>Student Dashboard</h2>
-        <button onClick={()=> setDarkMode(!darkMode)}>Dark Mode</button>
+        <button className="btn btn--ghost" onClick={()=> setDarkMode(!darkMode)}>{darkMode ? "Light Mode" : "Dark Mode"}</button>
     </div>
   )
 }

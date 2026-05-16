@@ -7,14 +7,15 @@ function SearchBar({search,setSearch}) {
         inputRef.current.focus();
     }
   return (
-    <div>
-        <input type="text"
+    <div className="input-group">
+        <input className="search-input" type="text"
         ref={inputRef}
         placeholder="Search Student"
+        aria-label="Search students"
         value={search}
         onChange={(e)=> setSearch(e.target.value)} />
-        <button onClick={focusInput}>
-            Focus Search
+        <button className="btn btn--ghost" onClick={focusInput} aria-label="Focus search">
+            Focus
         </button>
     </div>
   )
